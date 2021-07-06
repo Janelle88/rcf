@@ -62,8 +62,8 @@ rcf_data <- function(SiteID, latitude, longitude, units = "imperial"){
   if(units == "metric"){
     df <- df1 %>%
       dplyr::mutate(precip_ = pr,
-             tmax = tasmax,
-             tmin = tasmin,
+             tmax = tasmax - 273.1,
+             tmin = tasmin - 273.1,
              tavg = (tmax + tmin) / 2,
              GCM = paste(df1$model, df1$rcp, sep = "."),
              date = as.POSIXlt(date,format="%Y-%m-%d"))
