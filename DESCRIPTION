@@ -19,3 +19,5 @@ Imports:
     magrittr,
     sf,
     sp
+URL: https://github.com/Janelle88/rcf
+BugReports: https://github.com/Janelle88/rcf/issues
